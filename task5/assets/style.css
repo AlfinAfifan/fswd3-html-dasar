@@ -1,0 +1,59 @@
+:root {
+    --background-color: azure;
+    --main-color: skyblue;
+    --main-border: blue;
+    --other-color: aquamarine;
+    --other-border: green;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+main {
+    text-align: center;
+    background-color: var(--background-color);
+}
+
+h1 {
+    padding: 25px 0;
+}
+
+.first .card {
+    background-color: var(--main-color);
+    border: 3px solid var(--main-border);
+}
+
+.second {
+    margin-top: 30px;
+}
+
+.second .card {
+    background-color: var(--other-color);
+    border: 3px solid var(--other-border);
+}
+
+.card {
+    display: inline-block;
+    margin: 0 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card:hover {
+    scale: 1.08;
+    box-shadow: 3px 5px 8px black ;
+}
+
+.card img{
+    width: 200px;
+    height: 250px;
+}
+
+.card p {
+    margin: 5px 12px;
+    text-align: left;
+}
