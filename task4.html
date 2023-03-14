@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota, Playlist, Form</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        main {
+            background-color: rgb(237, 237, 237);
+            padding: 20px 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        /* NAVIGASI */
+        header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            background-color: #007bc8;
+            position: fixed;
+            width: 100%;
+        }
+
+        header h2 {
+            width: 600px;
+            color: white;
+        }
+
+        header ul {
+            display: flex;
+            width: 400px;
+            justify-content: space-around;
+        }
+
+        header ul li a {
+            color: white;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+
+        /* NOTA */
+        .nota {
+            width: 550px;
+            height: 650px;
+            margin: 90px auto 0 auto;
+            padding: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            background-color: white;
+            border: 4px solid grey;
+        }
+
+        .head-nota td:first-child {
+            width: 90px;
+        }
+
+        .isi-nota {
+            margin-top: -15px;
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        .isi-nota tr {
+            border: 1px solid black;
+        }
+        
+        .isi-nota th {
+            border: 1px solid black;
+            padding: 5px 0;
+        }
+        
+        .isi-nota td {
+            border: 1px solid black;
+            padding: 5px 0;
+        }
+
+
+        /* PLAYLIST VIDEO */
+        .playlist {
+            width: 92%;
+            margin: auto;
+        }
+        
+        .playlist h2{
+            text-align: center;
+            margin: auto;
+            margin-top: 90px;
+        }
+
+        .video {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .video ul {
+            padding: 20px;
+        }
+
+
+        /* FORM PENDAFTARAN */
+        form {
+            width: 93%;
+            background-color: white;
+            margin: 90px auto 10px auto;
+        }
+
+        form h2 {
+            display: block;
+            background-color: #40a4e1;
+            color: white;
+            padding: 7px 30px;
+        }
+
+        form ul {
+            padding: 25px 70px;
+            background-color: aliceblue;
+        }
+        
+        form ul li {
+            padding: 7px 0;
+            font-size: 1.1em;
+            display: flex;
+        }
+
+        form ul li label {
+            width: 15%;
+        }
+
+        form ul li .input-box {
+            width: 80%;
+            padding: 5px;
+        }
+
+        form ul li .radio {
+            margin-left: 20px;
+        }
+
+        form ul li select {
+            padding: 5px 0;
+            border-radius: 5px;
+        }
+
+        form ul li .btn {
+            margin-top: 30px;
+            width: 100px;
+            height: 40px;
+            border: 0;
+            border-radius: 8px;
+            background-color: #40a4e1;
+            font-size: 1em;
+            font-weight: bold;
+            color: aliceblue;
+            cursor: pointer;
+        }
+
+
+        /* FOOTER */
+        footer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 70px;
+            padding: 0 100px;
+            background-color: orange;
+        }
+        
+        footer .left {
+            font-size: 1.3em;
+            
+        }
+        
+        footer .right span{
+            display: block;
+            font-size: 1.15em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>Tugas Arkatama</h2>
+        <nav>
+            <ul>
+                <li><a href="task4.html">Home</a></li>
+                <li><a href="#nota">Nota</a></li>
+                <li><a href="#playlist">Playlist</a></li>
+                <li><a href="#form">Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="nota" id="nota">
+            <h1>Nota Pembelian</h1>
+            <h1>Toko Elektronik Arkatronik</h1>
+            <h4>JL Maju membangun bangsa No. 123, Malang</h4>
+
+            <table class="head-nota">
+                <tr>
+                    <td>No Nota</td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td>Kepada Yth.</td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td>Tanggal</td>
+                    <td>:</td>
+                </tr>
+            </table>
+
+            <table class="isi-nota">
+                <tr>
+                    <th>No</th>
+                    <th>Kode Barang</th>
+                    <th>Nama Barang</th>
+                    <th>Harga</th>
+                    <th>Jumlah</th>
+                    <th>Sub Total</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>BRG001</td>
+                    <td>Monitor 17"</td>
+                    <td>1.500.000</td>
+                    <td>2</td>
+                    <td>3.000.000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>BRG002</td>
+                    <td>Printer Epson L355</td>
+                    <td>1.500.000</td>
+                    <td>1</td>
+                    <td>1.500.000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>BRG003</td>
+                    <td>Mouse Logitech</td>
+                    <td>150.000</td>
+                    <td>5</td>
+                    <td>750.000</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="5">Total</td>
+                    <td>4.750.000</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="playlist" id="playlist">
+            <h2>Playlist Belajar Web Developer</h2>
+            <div class="video">
+                <ul>
+                    <li>
+                        1. HTML Dasar
+                    </li>
+                    <li>
+                        <iframe src="https://www.youtube.com/embed/watch?v=-J372iDFU8Y&list=PLFIM0718LjIU1lWlM34j6E9fMlrrSGZ1k&ab_channel=WebProgrammingUNPAS" frameborder="0"></iframe>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        2. CSS Dasar
+                    </li>
+                    <li>
+                        <iframe src="https://www.youtube.com/embed/watch?v=CleFk3BZB3g&list=PLFIM0718LjIUBrbm6Gdh6k7ZUvPIAZm7p&ab_channel=WebProgrammingUNPAS" frameborder="0"></iframe>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        3. CSS Layouting
+                    </li>
+                    <li>
+                        <iframe src="https://www.youtube.com/embed/watch?v=Phn2eN6j0pg&list=PLFIM0718LjIUu4Ju9GUL5zpLcuq08TKYr&ab_channel=WebProgrammingUNPAS" frameborder="0"></iframe>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        4. CSS Grid
+                    </li>
+                    <li>
+                        <iframe src="https://www.youtube.com/embed/watch?v=qCMLP6GtyBc&list=PLFIM0718LjIXmbwX0dEsoRVX-PC16vmuw&ab_channel=WebProgrammingUNPAS" frameborder="0"></iframe>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        5. Belajar PHP
+                    </li>
+                    <li>
+                        <iframe src="https://www.youtube.com/embed/watch?v=l1W2OwV5rgY&list=PLFIM0718LjIUqXfmEIBE3-uzERZPh3vp6&ab_channel=WebProgrammingUNPAS" frameborder="0"></iframe>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        6. Penjelasan Laravel 8
+                    </li>
+                    <li>
+                        <iframe src="https://www.youtube.com/embed/watch?v=HqAMb6kqlLs&list=PLFIM0718LjIWiihbBIq-SWPU6b6x21Q_2&ab_channel=WebProgrammingUNPAS" frameborder="0"></iframe>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        7. GIT dan GITHUB
+                    </li>
+                    <li>
+                        <iframe src="https://www.youtube.com/embed/watch?v=lTMZxWMjXQU&list=PLFIM0718LjIVknj6sgsSceMqlq242-jNf&ab_channel=WebProgrammingUNPAS" frameborder="0"></iframe>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        8. Dasar Pemrograman JavaScript
+                    </li>
+                    <li>
+                        <iframe src="https://www.youtube.com/embed/watch?v=RUTV_5m4VeI&list=PLFIM0718LjIWXagluzROrA-iBY9eeUt4w&ab_channel=WebProgrammingUNPAS" frameborder="0"></iframe>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        9. JavaScript Lanjutan
+                    </li>
+                    <li>
+                        <iframe src="https://www.youtube.com/embed/watch?v=RwT41El778A&list=PLFIM0718LjIUGpY8wmE41W7rTJo_3Y46-&ab_channel=WebProgrammingUNPAS" frameborder="0"></iframe>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        10. Tutorial SASS
+                    </li>
+                    <li>
+                        <iframe src="https://www.youtube.com/embed/watch?v=XZXBqpGU8n4&list=PLFIM0718LjIUqemgG97MAOK0J_berlQM5&ab_channel=WebProgrammingUNPAS" frameborder="0"></iframe>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <form action="#" method="post" id="form">
+            <h2>Form Pendaftaran SIB 2023</h2>
+            <ul>
+                <li>
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" name="nama" id="nama" class="input-box" placeholder="Masukkan nama anda">
+                </li>
+                <li>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" class="input-box" placeholder="Masukkan email anda">
+                </li>
+                <li>
+                    <label for="telp">Nomor HP</label>
+                    <input type="number" name="telp" id="telp" class="input-box" placeholder="Masukkan nomor telepon anda">
+                </li>
+                <li>
+                    <label for="jk">Jenis Kelamin</label>
+                    <input type="radio" name="jk" id="jk" value="laki">Laki-laki
+                    <input type="radio" name="jk" id="jk" value="perempuan" class="radio">Perempuan
+                </li>
+                <li>
+                    <label for="jurusan">Jurusan</label>
+                    <select name="jurusan" id="jurusan">
+                        <option selected disabled hidden>Pilih Prodi</option>
+                        <option value="Teknik Informatika">Teknik Informatika</option>
+                        <option value="Sistem Informasi">Sistem Informasi</option>
+                        <option value="Teknik Mesin">Teknik Mesin</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="alamat">Alamat</label>
+                    <textarea name="alamat" id="alamat" cols="30" rows="10" class="input-box" placeholder="Masukkan alamat anda"></textarea>
+                </li>
+                <li>
+                    <label for="foto">Foto</label>
+                    <input type="file" name="foto" id="foto">
+                </li>
+                <li>
+                    <label for=""></label>
+                    <input type="submit" value="Daftar" class="btn"></input>
+                </li>
+            </ul>
+        </form>
+    </main>
+
+    <footer>
+        <div class="left">Dibuat Untuk Memenuhi Tugas Studi Independen di PT Arkatama</div>
+        <div class="right">
+            <span>ID : 4573207</span>
+            <span>Nama: Agus Alfin 'Afifan Mahfudh</span>
+        </div>
+    </footer>
+
+</body>
+</html>
