@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+    <script>
+
+        // OPERASI ARITMATIKA
+        console.log('=> Aritmatika');
+        var a = 8;
+        var b = 2;
+
+        var penjumlahan = a + b;
+        var pengurangan = a - b;
+        var perkalian = a * b;
+        var pembagian = a / b;
+
+        console.log(penjumlahan);
+        console.log(pengurangan);
+        console.log(perkalian);
+        console.log(pembagian);
+
+
+        // ASSIGN
+        console.log('=> Assign');
+        var a = 20;
+        a += 5;
+        console.log(a);
+
+
+        // Do While
+        console.log('=> Do While');
+        var a = 0;
+        do {
+            console.log(`ini baris ke ${a}`);
+            a+=1;
+        } while (a < 5);
+        
+
+        // For
+        console.log('=> Perulangan dengan for');
+        var a = 0;
+        for(var a = 0 ; a < 5 ; a++) {
+            console.log(`ini baris ke ${a}`)
+        }
+
+
+        // If Else
+        console.log('=> If Else');
+        var nilai = 70;
+        if ((nilai >=80) && (nilai <=100)) {
+            console.log("indeks nilai A");
+        } else if ((nilai >=70) && (nilai <=79))
+        {
+            console.log("indeks nilai B");
+        } else
+        {
+            console.log("indeks nilai C");
+        }
+
+
+        // Perbandingan
+        console.log('=> Perbandingan');
+        var a = 5;
+        console.log((a % 2) == 0 ? 'Genap' : 'Ganjil');
+
+
+        // Switch
+        console.log('=> Switch')
+        var warna = "merah";
+
+        switch (warna){
+            case "hitam" :
+                console.log ("ini warna hitam");
+                break;
+            case "merah" :
+                console.log ("ini warna merah");
+                break;
+            case "hijau" :
+                console.log ("ini warna hijau");
+                break;
+        }
+
+
+        // Array Object
+        console.log('=> Array Object');
+        var mahasisawa = [
+            {
+                nama: 'Agus',
+                id: 010,
+                prodi: 'Teknik Informatika'
+            },
+            {
+                nama: 'Alfin',
+                id: 011,
+                prodi: 'Sistem Informasi'
+            },
+            {
+                nama: 'Afifan',
+                id: 012,
+                prodi: 'Teknik Elektro'
+            }
+        ]
+        
+        var print = mahasisawa.map(m => console.log(m));
+
+    </script>
+</html>
