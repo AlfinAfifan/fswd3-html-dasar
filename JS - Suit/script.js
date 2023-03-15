@@ -14,7 +14,7 @@ while (tanya) {
         comp = 'kertas';
     } else {
         comp = 'gunting';
-    }
+    };
 
 
     // Menentukan rules
