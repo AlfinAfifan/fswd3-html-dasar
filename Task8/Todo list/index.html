@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+        .top {
+            width: 100vw;
+            height: 25vh;
+            padding: 50px 70px;
+            background-color: rgb(17, 152, 255);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .top h1{
+            font-size: 2.5em;
+            text-decoration: underline;
+            margin-bottom: 15px;
+        }
+
+        .top p {
+            font-size: 1.3em;
+        }
+
+        form {
+            padding: 20px 70px;
+        }
+
+        form input {
+            padding: 5px 10px;
+            font-size: 1em;
+            border-radius: 20px;
+        }
+
+        form button {
+            font-size: 1em;
+            padding: 5px 10px;
+            border-radius: 25px;
+            background-color: rgb(0, 132, 255);
+            cursor: pointer;
+        }
+
+        form button:active {
+            background-color: white;
+        }
+
+        .newList {
+            margin: 15px 15px 15px 70px;
+        }
+
+        .text {
+            padding: 5px 10px;
+            background-color: rgb(0, 132, 255);
+            border-radius: 25px;
+        }
+
+        .ceklis {
+            margin-left: 15px;
+            padding: 5px;
+            border-radius: 25px;
+            background-color: rgb(69, 230, 69);
+            cursor: pointer;
+        }
+        
+        .delete {
+            margin-left: 7px;
+            padding: 5px 8px;
+            border-radius: 25px;
+            background-color: red;
+            cursor: pointer;
+        }
+
+        .done {
+            opacity: 0.4;
+        }
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="top">
+            <h1>My To Do List</h1>
+            <p>Silahkan membuat list:</p>
+        </div>
+
+        <form action="#">
+            <input type="text" id="list" autocomplete="off" placeholder="Tulis daftar kegiatan">
+            <button onclick="add()">Tambah</button>
+        </form>
+
+        <ul id="todo"></ul>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
