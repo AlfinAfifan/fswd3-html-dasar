@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merchandise</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="big">
+                <h2 class="heading">Find Merchandise</h2>
+                <p class="sub-heading">All About Reminisce</p>
+            </div>
+            <div class="features feature1">
+                <h4 class="price">IDR 250K</h4>
+                <p class="item">Hoodie</p>
+            </div>
+            <div class="features feature2">
+                <h4 class="price">IDR 100K</h4>
+                <p class="item">T-Shirt</p>
+            </div>
+        </header>
+
+        <nav class="menu">
+            <div class="tittle">
+                <h1>Find Merch</h1>
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Gallery</a></li>
+            </ul>
+        </nav>
+
+        <sectoin class="services">
+            <div class="service">
+                <div class="icon">🖥️</div>
+                <h3>Tutorial</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laudantium enim iste amet vel obcaecati!</p>
+            </div>
+            <div class="service">
+                <div class="icon">🧑‍🎓</div>
+                <h3>Course</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laudantium enim iste amet vel obcaecati!</p>
+            </div>
+            <div class="service">
+                <div class="icon">🎙️</div>
+                <h3>Podcast</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laudantium enim iste amet vel obcaecati!</p>
+            </div>
+            <div class="service">
+                <div class="icon">👕</div>
+                <h3>Merchandise</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit laudantium enim iste amet vel obcaecati!</p>
+            </div>
+        </sectoin>
+
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <img src="https://source.unsplash.com/random/201x201" alt="">
+            <img src="https://source.unsplash.com/random/202x202" alt="">
+            <img src="https://source.unsplash.com/random/203x203" alt="">
+            <img src="https://source.unsplash.com/random/204x204" alt="">
+            <img src="https://source.unsplash.com/random/205x205" alt="">
+            <img src="https://source.unsplash.com/random/206x206" alt="">
+            <img src="https://source.unsplash.com/random/207x207" alt="">
+            <img src="https://source.unsplash.com/random/208x208" alt="">
+            <img src="https://source.unsplash.com/random/209x209" alt="">
+            <img src="https://source.unsplash.com/random/2010x2010" alt="">
+        </section>
+    </div>
+
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu-list');
+
+        toggle.addEventListener('click', function() {
+            toggle.classList.toggle('active');
+            menu.classList.toggle('slide');
+        })
+    </script>
+</body>
+</html>
