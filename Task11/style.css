@@ -1,0 +1,26 @@
+.card {
+  cursor: pointer;
+}
+
+.card .icon {
+  font-size: 4em;
+}
+
+.gallery img {
+  border: 0.7em solid white;
+  margin: 0.8em 0;
+}
+
+.toggle {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .toggle {
+    display: block;
+  }
+
+  .expand {
+    display: none;
+  }
+}
